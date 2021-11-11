@@ -67,7 +67,7 @@ def tokenize(batch):
 
 # tokenize train and test datasets
 train_dataset = train_dataset.map(tokenize, batched=True)
-test_dataset = test.dataset.map(tokenize, batched=True)
+test_dataset = test_dataset.map(tokenize, batched=True)
 
 # set dataset format for PyTorch
 train_dataset =  train_dataset.rename_column("label", "labels")
@@ -158,4 +158,4 @@ predictor.delete_endpoint()
 
 Congratulations, you've just fine-tuned and deployed a pretrained 🤗 Transformers model on SageMaker! 🎉
 
-For your next steps, keep reading our documentation for more details about training and deployment. There are many interesting features such as [distributed training](/docs/sagemaker/train#distributed-training) and [Spot instances](/docs/sagemaker/train#spot-instances).
+For your next steps, keep reading our documentation for more details about training and deployment. There are many interesting features such as [distributed training](/docs/sagemaker/train#distributed-training) and [Spot instances](/docs/sagemaker/train#spot-instances). 
